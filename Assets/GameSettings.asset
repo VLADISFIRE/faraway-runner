@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e7d3c5aeaaa43638d7cf80977e33095, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: 
+  character:
+    prefab: {fileID: 3791535494510312512, guid: cc30565847df13a4295e04005b463f1b, type: 3}
+    jumpPower: 2
+    jumpDuration: 1.1
+    jumpSpeed: 0.5
+    step: 1.25
+    speed: 1
+  startWindow: {fileID: 9222009066413771437, guid: f7442158fc45c2d4882ab81b78a3eefc, type: 3}
