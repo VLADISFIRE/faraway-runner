@@ -27,6 +27,7 @@ namespace Game
 
             _animator = _characterGameObject.GetComponent<Animator>();
             _animator.SetFloat("JumpSpeed", _settings.jumpSpeed);
+            _animator.SetFloat("Speed", _settings.speed);
         }
 
         public void Jump()
@@ -36,7 +37,8 @@ namespace Game
 
             _jumping = true;
             _animator.SetBool("Jumping", true);
-            _jumpSequence = _characterGameObject.transform.DOLocalJump(Vector3.zero, _settings.jumpPower, 1, _settings.jumpDuration).OnComplete(HandleJumped);
+            _jumpSequence = _characterGameObject.transform.DOLocalJump(Vector3.zero, _settings.jumpPower, 1, _settings.jumpDuration)
+               .OnComplete(HandleJumped);
         }
 
         public void Slide()
@@ -97,8 +99,8 @@ namespace Game
 
         private void ForceDisableJump()
         {
-            _jumpSequence?.DOTimeScale(6,0.1f);
-            
+            _jumpSequence?.DOTimeScale(6, 0.1f);
+
             HandleJumped();
         }
 
@@ -119,6 +121,6 @@ namespace Game
         public float jumpSpeed = 1f;
 
         public float step = 1.5f;
-        public float speed = 1;
+        public float speed = 0.7f;
     }
 }

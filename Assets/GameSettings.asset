@@ -18,5 +18,5 @@ MonoBehaviour:
     jumpDuration: 1.1
     jumpSpeed: 0.5
     step: 1.25
-    speed: 1
+    speed: 0.75
   startWindow: {fileID: 9222009066413771437, guid: f7442158fc45c2d4882ab81b78a3eefc, type: 3}
