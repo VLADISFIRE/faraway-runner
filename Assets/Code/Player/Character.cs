@@ -51,14 +51,14 @@ namespace Game
         {
             var x = position.x;
 
-            if (x >= _settings.step)
+            if (x >= _settings.offset)
                 return;
 
             var newX = 0f;
 
-            if (x >= 0 && x < _settings.step)
+            if (x >= 0 && x < _settings.offset)
             {
-                newX = _settings.step;
+                newX = _settings.offset;
             }
 
             DoMoveX(newX);
@@ -68,14 +68,14 @@ namespace Game
         {
             var x = position.x;
 
-            if (x <= -_settings.step)
+            if (x <= -_settings.offset)
                 return;
 
             var newX = 0f;
 
-            if (x < _settings.step && x <= 0)
+            if (x < _settings.offset && x <= 0)
             {
-                newX = -_settings.step;
+                newX = -_settings.offset;
             }
 
             DoMoveX(newX);
@@ -83,7 +83,7 @@ namespace Game
 
         private void DoMoveX(float x, float duration = 0.3f)
         {
-            x = Mathf.Clamp(x, -_settings.step, _settings.step);
+            x = Mathf.Clamp(x, -_settings.offset, _settings.offset);
             _root.transform.DOMoveX(x, duration).OnComplete(
                 () =>
                 {
@@ -116,11 +116,13 @@ namespace Game
     {
         public GameObject prefab;
 
+        //Between line
+        public float offset = 1.5f;
+
         public float jumpPower = 2;
         public float jumpDuration = 1.5f;
         public float jumpSpeed = 1f;
 
-        public float step = 1.5f;
         public float speed = 0.7f;
     }
 }
