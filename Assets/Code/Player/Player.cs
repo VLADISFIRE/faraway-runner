@@ -20,7 +20,7 @@ namespace Game
 
             _input.onAction += HandleAction;
 
-            camera.SetTarget(character.CharacterGameObject);
+            camera.SetTarget(character.characterGameObject);
         }
 
         public void Dispose()
