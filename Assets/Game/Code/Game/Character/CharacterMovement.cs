@@ -98,7 +98,7 @@ namespace Game
         {
             if (_state == MovementState.Fly) return;
 
-            _y = 10;
+            _y = _settings.flyY;
             SetState(MovementState.Fly);
         }
 
