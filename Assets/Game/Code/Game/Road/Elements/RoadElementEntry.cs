@@ -5,7 +5,7 @@ using UnityEngine;
 [Serializable]
 public class RoadElementEntry
 {
-    public GameObject prefab;
+    public GameObject view;
     
     public EffectSettingsScrobject effect;
 }

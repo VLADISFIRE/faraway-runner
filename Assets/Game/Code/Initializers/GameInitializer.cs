@@ -23,6 +23,7 @@ namespace Game
             ServiceLocator.Register(new EffectsRoadElementsTriggerReactor());
 
             ServiceLocator.Register(new PlayerCharacterViewPresenter());
+            ServiceLocator.Register(new RoadElementsViewPresenter());
         }
     }
 }

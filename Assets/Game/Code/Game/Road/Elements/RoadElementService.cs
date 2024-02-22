@@ -34,13 +34,6 @@ namespace Game
             _gameService.started -= HandleStarted;
         }
 
-        public void Clear(RoadElementModel element)
-        {
-            element.Dispose();
-            cleared?.Invoke(element);
-            element.triggered -= HandleElementTriggered;
-        }
-
         private void HandleStarted()
         {
             var skip = 3;
@@ -96,6 +89,13 @@ namespace Game
 
                 list.Clear();
             }
+        }
+
+        private void Clear(RoadElementModel element)
+        {
+            element.Dispose();
+            cleared?.Invoke(element);
+            element.triggered -= HandleElementTriggered;
         }
 
         private void HandleElementTriggered(RoadElementModel element, ITriggerSource source)

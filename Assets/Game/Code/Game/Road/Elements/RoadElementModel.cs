@@ -12,13 +12,15 @@ public class RoadElementModel : IDisposable
     private GameObject _root;
     private CollisionTriggerComponent _component;
 
-    public event Action<RoadElementModel, ITriggerSource> triggered;
     public RoadElementEntry entry { get { return _entry; } }
+    public GameObject root { get { return _root; } }
+
+    public event Action<RoadElementModel, ITriggerSource> triggered;
 
     public RoadElementModel(RoadElementEntry entry)
     {
         _entry = entry;
-        _root = Object.Instantiate(_entry.prefab);
+        _root = new GameObject("RoadElement");
 
         if (entry.effect != null)
         {
