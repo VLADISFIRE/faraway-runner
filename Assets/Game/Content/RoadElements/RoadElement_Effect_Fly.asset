@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055e099176df4c4f8f964361f89cfc65, type: 3}
+  m_Name: RoadElement_Effect_Fly
+  m_EditorClassIdentifier: 
+  entry:
+    prefab: {fileID: 1253830074184961271, guid: 137aca845329c0f44b3d9905e93b887c, type: 3}
+    effect: {fileID: 11400000, guid: 80d0414ddee63704ea89b4d9326bf400, type: 2}

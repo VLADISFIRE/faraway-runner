@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e7d3c5aeaaa43638d7cf80977e33095, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: 
+  character:
+    view: {fileID: 3791535494510312512, guid: cc30565847df13a4295e04005b463f1b, type: 3}
+    movement:
+      controller: {fileID: 1849536354216382921, guid: c997ab7a830fa974ba549c46f113ae28, type: 3}
+      jumpForce: 8
+      speed: 6
+      dodgeSpeed: 6
+      gravity: 17
+      flySpeed: 10
+      flyY: 10
+  road:
+    elements:
+    - {fileID: 11400000, guid: bccb74cdcadeda04486b07e190b202ef, type: 2}
+    - {fileID: 11400000, guid: ab53e32ab9d1c754aa4985a8052f3339, type: 2}
+    - {fileID: 11400000, guid: 4f060acb38d143945ad6235818ee1436, type: 2}
