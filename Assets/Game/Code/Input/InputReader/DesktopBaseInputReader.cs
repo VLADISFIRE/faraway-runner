@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.InputManagement
 {
-    public class DesktopBaseInputReader : BaseInputReader
+    public class DesktopInputReader : BaseInputReader
     {
         private Vector3 _lastMousePosition;
 

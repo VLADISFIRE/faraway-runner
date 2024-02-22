@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.InputManagement
 {
-    public class MobileBaseInputReader : BaseInputReader
+    public class MobileInputReader : BaseInputReader
     {
         protected override void ReadInput()
         {

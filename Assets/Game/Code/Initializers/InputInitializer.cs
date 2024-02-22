@@ -8,9 +8,9 @@ namespace Game
         {
             IInputReader inputReader;
 #if UNITY_EDITOR
-            inputReader = new DesktopBaseInputReader();
+            inputReader = new DesktopInputReader();
 #else
-            _inputReader = new MobileInputReader();
+            inputReader = new MobileInputReader();
 #endif
             ServiceLocator.Register(inputReader);
 

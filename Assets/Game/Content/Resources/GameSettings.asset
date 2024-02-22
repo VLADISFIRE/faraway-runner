@@ -21,7 +21,7 @@ MonoBehaviour:
       dodgeSpeed: 6
       gravity: 17
       flySpeed: 10
-      flyY: 10
+      flyY: 5
   road:
     elements:
     - {fileID: 11400000, guid: bccb74cdcadeda04486b07e190b202ef, type: 2}
