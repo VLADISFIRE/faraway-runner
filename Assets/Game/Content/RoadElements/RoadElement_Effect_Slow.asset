@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RoadElement_Effect_Slow
   m_EditorClassIdentifier: 
   entry:
-    prefab: {fileID: 1253830074184961271, guid: 670b77da5b8b35b46ad49b1523bb2404, type: 3}
+    view: {fileID: 1253830074184961271, guid: 670b77da5b8b35b46ad49b1523bb2404, type: 3}
     effect: {fileID: 11400000, guid: 9156c463d5e862b46a6da3d15e1fa8dc, type: 2}

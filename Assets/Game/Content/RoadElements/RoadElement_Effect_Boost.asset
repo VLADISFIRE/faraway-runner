@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RoadElement_Effect_Boost
   m_EditorClassIdentifier: 
   entry:
-    prefab: {fileID: 1253830074184961271, guid: 70a191225b08f064e90e35e4e7d23a58, type: 3}
+    view: {fileID: 1253830074184961271, guid: 70a191225b08f064e90e35e4e7d23a58, type: 3}
     effect: {fileID: 11400000, guid: 5217509a119143f488841231e74a5fa7, type: 2}

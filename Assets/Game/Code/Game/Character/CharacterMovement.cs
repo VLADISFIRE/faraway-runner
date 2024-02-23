@@ -71,11 +71,11 @@ namespace Game
 
             var y = _y * Time.deltaTime;
 
-            if (_state == MovementState.Fly && position.y > _settings.flyY)
+            var positionY = position.y;
+            if (_state == MovementState.Fly && positionY >= _settings.flyY)
             {
-                var delta = position.y - _settings.flyY;
-                y = delta > float.Epsilon ? delta : 0;
-                y *= Time.deltaTime;
+                _y = 0;
+                transform.position = new Vector3(position.x, _settings.flyY, position.z);
             }
 
             var motion = new Vector3(_x - position.x, y, Time.deltaTime * speed);

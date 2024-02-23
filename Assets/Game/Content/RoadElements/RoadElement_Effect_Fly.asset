@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RoadElement_Effect_Fly
   m_EditorClassIdentifier: 
   entry:
-    prefab: {fileID: 1253830074184961271, guid: 137aca845329c0f44b3d9905e93b887c, type: 3}
+    view: {fileID: 1253830074184961271, guid: 137aca845329c0f44b3d9905e93b887c, type: 3}
     effect: {fileID: 11400000, guid: 80d0414ddee63704ea89b4d9326bf400, type: 2}
