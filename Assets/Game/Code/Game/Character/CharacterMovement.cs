@@ -44,6 +44,8 @@ namespace Game
 
         public event Action<Vector3> positionChanged;
 
+        public event Action speedUpdated;
+
         public CharacterMovement(CharacterMovementSettings settings)
         {
             _settings = settings;
@@ -92,6 +94,7 @@ namespace Game
         {
             _y = 0;
             SetState(MovementState.Run);
+            NotifySpeedUpdated();
         }
 
         public void SetFly()
@@ -100,6 +103,7 @@ namespace Game
 
             _y = _settings.flyY;
             SetState(MovementState.Fly);
+            NotifySpeedUpdated();
         }
 
         public void Jump()
@@ -160,11 +164,13 @@ namespace Game
         public void SetSlow(bool value)
         {
             _isSlow = value;
+            NotifySpeedUpdated();
         }
 
         public void SetBoost(bool value)
         {
             _isBoost = value;
+            NotifySpeedUpdated();
         }
 
         private float GetSpeed()
@@ -179,6 +185,11 @@ namespace Game
                 return _speed * 2;
 
             return _speed;
+        }
+
+        private void NotifySpeedUpdated()
+        {
+            speedUpdated?.Invoke();
         }
 
         private void Fall()

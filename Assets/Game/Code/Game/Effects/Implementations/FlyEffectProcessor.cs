@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Game.Effects.Implementations
+﻿namespace Game.Effects.Implementations
 {
     public class FlyEffectProcessor : EffectProcessor
     {
