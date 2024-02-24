@@ -16,14 +16,18 @@ namespace Game
             ServiceLocator.Register(new GameService());
             ServiceLocator.Register(new CameraFollow());
             ServiceLocator.Register(new PlayerService());
+            
             ServiceLocator.Register(new RoadService());
             ServiceLocator.Register(new RoadElementService());
+            ServiceLocator.Register(new WorldCurve());
             
             ServiceLocator.Register(new EffectsService());
             ServiceLocator.Register(new EffectsRoadElementsTriggerReactor());
 
             ServiceLocator.Register(new PlayerCharacterViewPresenter());
             ServiceLocator.Register(new RoadElementsViewPresenter());
+                
+
         }
     }
 }
