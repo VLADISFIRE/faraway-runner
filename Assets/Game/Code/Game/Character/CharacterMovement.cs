@@ -35,7 +35,24 @@ namespace Game
         private CharacterController _controller;
 
         public CharacterMovementSettings settings { get { return _settings; } }
-        public float speed { get { return GetSpeed(); } }
+
+        public float speed
+        {
+            get
+            {
+                if (_state == MovementState.Fly)
+                    return _settings.flySpeed;
+
+                if (_isSlow && !_isBoost)
+                    return _speed / 2;
+
+                if (_isBoost && !_isSlow)
+                    return _speed * 2;
+
+                return _speed;
+            }
+        }
+
         public float jumpForce { get { return _settings.jumpForce; } }
 
         public GameObject root { get { return _root; } }
@@ -171,20 +188,6 @@ namespace Game
         {
             _isBoost = value;
             NotifySpeedUpdated();
-        }
-
-        private float GetSpeed()
-        {
-            if (_state == MovementState.Fly)
-                return _settings.flySpeed;
-
-            if (_isSlow)
-                return _speed / 2;
-
-            if (_isBoost)
-                return _speed * 2;
-
-            return _speed;
         }
 
         private void NotifySpeedUpdated()

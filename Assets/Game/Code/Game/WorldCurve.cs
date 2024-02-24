@@ -33,7 +33,7 @@ namespace Game
             SetStartCurveWorld();
             RandomNextCurveWorld();
             RandomSpeed();
-
+            
             EngineEvents.Subscribe(EventsType.Update, HandleUpdate);
         }
 
